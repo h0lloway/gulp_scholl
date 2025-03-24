@@ -1,0 +1,284 @@
+.hero {
+  padding-top: 20px;
+  padding-bottom: 300px;
+  position: relative;
+  background: url(../img/bg2.png);
+  background-size: cover;
+  background-position: center top;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    padding: 20px 41px;
+    width: 100%;
+    border-radius: 20px;
+    background: var(--main-black);
+
+
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    &__list-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      span {
+        font-size: 18px;
+        line-height: 130%;
+        color: rgba(78, 95, 128, 1);
+      }
+    }
+
+    &__btn {
+      padding: 30px 40px;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      color: var(--green);
+      border: 1px solid var(--green);
+      border-radius: 9px;
+      transition: .3s ease;
+    }
+
+    &__btn:hover {
+      background: var(--green);
+      color: var(--main-black);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 50px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 796px;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    color: var(--green);
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+  }
+
+  &__descr {
+    max-width: 530px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__descr.first {
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    width: 100%;
+    margin: 59px 0 0;
+    background: rgba(36, 43, 56, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 29px 37px;
+  }
+
+  &__form-wrap {
+    min-height: 100px;
+  }
+
+  .wait {
+    padding-top: 200px;
+    width: 100%;
+    position: relative;
+
+    &__title {
+      line-height: 90%;
+
+      .title-before {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__list-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      span {
+        font-size: 22px;
+        line-height: 120%;
+      }
+    }
+
+    &__list-item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+  }
+
+
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/phone-wait.png');
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 969px) {
+  .hero {
+    .top {
+
+      justify-content: center;
+
+      &__btn {
+        display: none;
+      }
+    }
+
+    &__content {
+      padding: 0;
+      align-items: center;
+    }
+
+    &__form {
+      width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 799px) {
+
+  .hero {
+
+    background: url(../img/bg-mob2.png);
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: center;
+
+
+    &__content {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+
+    .top {
+      max-width: 400px;
+      border-radius: 12px;
+      padding: 13px 11px;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      &__list {
+        gap: 0;
+      }
+
+      &__list-item {
+        gap: 8px;
+
+        span {
+          font-size: 11px;
+        }
+
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      &__list-item:first-child {
+        margin-right: 20px;
+      }
+
+    }
+
+    &__subtitle {
+      font-size: 10px;
+    }
+
+    &__descr {
+      font-size: 15px;
+    }
+
+    &__form {
+      margin-top: 370px;
+      width: 350px;
+    }
+
+    .wait {
+      padding-top: 140px;
+      width: 100%;
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+
+      &__title {
+        line-height: 115%;
+
+        .title-before {
+          display: flex;
+          align-items: center;
+
+          svg {
+            position: absolute;
+            left: 180px;
+            width: 60px;
+            height: 70px;
+          }
+        }
+      }
+
+      &__list-item {
+        gap: 10px;
+
+        svg {
+          width: 34px;
+          height: 34px;
+        }
+
+        span {
+          font-size: 15px;
+        }
+
+      }
+
+      &__list-item:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+
+
+
+  }
+
+  .hero::before {
+    background-image: url('../img/phone-mob.png');
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 41%;
+  }
+}

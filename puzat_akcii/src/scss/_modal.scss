@@ -1,0 +1,115 @@
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+
+.modal-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(12px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 15px;
+	height: 100vh;
+	width: 100%;
+	z-index: 15;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease-in-out;
+	overflow: auto;
+}
+
+.modal {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+
+	background-color: #1D1D1F;
+	z-index: 20;
+}
+
+.modal-overlay--visible {
+	opacity: 1;
+	visibility: visible;
+	transition: all .3s ease-in-out;
+}
+
+.modal--visible {
+	display: block;
+}
+
+.close-modal-btn {
+	position: absolute;
+	right: 10px;
+	top: -20px;
+}
+
+.close-modal-btn,
+.close-modal-btn span {
+	width: 20px;
+	height: 20px;
+}
+
+.close-modal-btn span::after,
+.close-modal-btn span::before {
+	content: "";
+	background-color: #999;
+	position: absolute;
+	width: 30px;
+	height: 3px;
+	right: 0px;
+	top: 0px;
+	transition: all 0.3s ease 0s;
+}
+
+.close-modal-btn span::after {
+	transform: rotate(-45deg);
+	border-radius: 20px;
+
+}
+
+.close-modal-btn span::before {
+	transform: rotate(-135deg);
+	border-radius: 20px;
+}
+
+.close-modal-btn span:hover::after,
+.close-modal-btn span:hover::before {
+	background-color: #1D1D1F;
+}
+
+.modal--1 {
+	padding: 50px 30px 30px 30px;
+	border-radius: 15px;
+	margin: 30px auto;
+}
+
+@media (max-width: 950px) {
+	.modal-overlay {
+
+		display: block;
+	}
+
+	.modal-form {
+		padding: 50px 20px;
+	}
+
+	.modal--1 {
+		margin: 20vh auto;
+
+	}
+}

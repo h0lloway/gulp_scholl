@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+	font-family: Bebas;
+	src: local("Bebas"),
+		url('../fonts/bebas-neue-bold.woff2') format("woff2"),
+		url('../fonts/bebas-neue-bold.woff') format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap
+}
+
+html {
+	box-sizing: border-box;
+}
+
+:root {
+	--main-color: #141414;
+	--btn-color: #C92240;
+	--violet-color: #3261CA;
+	--dif-color: #3261CA;
+	--orange-color: #C35200;
+	--white-color: #FDFCF8;
+	--grey-color: #949494;
+	--light-blue-color: #00A0D6;
+	--blue-color: #025DB1;
+
+	--hover-btn: #a71c35;
+
+	color-scheme: only light;
+}
+
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*:focus-visible {
+	outline: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+a {
+	position: relative;
+	color: inherit;
+	text-decoration: none;
+}
+
+input,
+textarea {
+	outline: none;
+	border: none;
+}
+
+input[type=text]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+input[type=text]::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+	display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+img,
+svg {
+	user-select: none;
+	pointer-events: none;
+	max-width: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Manrope', sans-serif;
+	font-weight: 400;
+	background-color: var(--main-color);
+	color: var(--white-color);
+}
+
+.container {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.container {
+		max-width: 420px;
+		margin: 0 auto;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+}
+
+.list-reset {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.btn-reset {
+	padding: 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	background: transparent;
+	transition: .3s ease;
+}
+
+.heading {
+	&-1 {
+		position: relative;
+		display: block;
+		font: 700 63px/63px 'Bebas', sans-serif;
+		margin-bottom: 29px;
+		text-transform: uppercase;
+		color: var(--white-color);
+
+
+		span {
+			display: block;
+		}
+
+		.dif-color {
+			color: #3261CA;
+
+		}
+
+		.for-mob {
+			display: none;
+		}
+	}
+
+	&-2 {
+		font: 400 64px/135% 'Rubik Mono One', sans-serif;
+
+		color: var(--main-black);
+		text-transform: uppercase;
+		text-align: center;
+		word-spacing: -25px;
+	}
+
+	&-3 {
+		font: 600 26px/32px 'Rubik', sans-serif;
+		color: var(--white-color);
+	}
+
+	@media screen and (max-width: 1199px) {
+		&-1 {
+
+			font-size: 63px;
+			line-height: 68px;
+
+			.for-tablet {
+				display: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 950px) {
+		&-1 {
+			margin-bottom: 33px;
+			font-size: 27px;
+			line-height: 26px;
+			text-align: center;
+			.for-mob {
+				display: none;
+			}
+		}
+		&-2 {
+			font-size: 23px;
+			line-height: 30px;
+			word-spacing: -12px;
+		}
+	}
+}
+.dif-color {
+	color: var(--green-color);
+}
+.btn-cmn {
+	padding: 25px 30px;
+	border-radius: 23px;
+
+	font: 500 20px/100% 'Rubik', sans-serif;
+	color: #000;
+
+	transition: .3s ease;
+}
+
+@media (hover:hover) {
+	.btn-cmn:hover {
+		background-color: var(--yellow-hover);
+	}
+}
+
+@media (hover:none) {
+	.btn-cmn:active {
+		background-color: var(--yellow-hover);
+	}
+}
+
+.common-descr {
+	margin-top: 16px;
+	margin-bottom: 30px;
+	font: 400 16px/100% 'Rubik', sans-serif;
+}
+
+.play-img {
+	transform: translateY(5px);
+}
+
+@media screen and (max-width: 1100px) {
+
+	.cmn-logo {
+		width: 158px;
+		height: 20px;
+
+	}
+
+	.play-img {
+		width: 27px;
+		height: 32px;
+
+		transform: translateY(2px);
+	}
+}
+
+@media screen and (max-width: 700px) {
+
+	.cmn-logo {
+		width: 158px;
+		height: 20px;
+
+	}
+
+	.play-img {
+		width: 17px;
+		height: 19px;
+
+		transform: translateY(1px);
+	}
+}
